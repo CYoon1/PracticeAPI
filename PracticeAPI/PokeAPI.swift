@@ -14,13 +14,11 @@ class PageOfPokemon: ObservableObject {
         var id = UUID()
         var count: Int
         var next: String?
-        var previous: String?
         var results: [Pokemon]
         
         enum CodingKeys: CodingKey {
             case count
             case next
-            case previous
             case results
         }
     }
@@ -28,14 +26,13 @@ class PageOfPokemon: ObservableObject {
     @Published var urlString: String? = "https://pokeapi.co/api/v2/pokemon"
     
     @Published var count = 0
-    @Published var next: String = ""
-    @Published var previous: String = ""
+    @Published var next: String? = ""
     @Published var results: [Pokemon] = []
     @Published var displayPokemon: [Pokemon] = []
     
     func getData() async {
         print("getData()")
-        guard let urlString, urlString != "none" else {
+        guard let urlString else {
             print("No more data to call")
             return
         }
@@ -53,8 +50,7 @@ class PageOfPokemon: ObservableObject {
             return
         }
         count = returned.count
-        next = returned.next ?? "none"
-        previous = returned.previous ?? ""
+        next = returned.next
         results = results + returned.results
         
         self.urlString = next
@@ -62,7 +58,7 @@ class PageOfPokemon: ObservableObject {
         filter(with: "")
     }
     func getAll() async {
-        while(next != "none") {
+        while(next != nil) {
             await getData()
         }
         print("End getAll()")
@@ -95,19 +91,15 @@ struct PokemonView: View {
                 }
             }
             .searchable(text: $searchText)
+            .disableAutocorrection(true)
+            .refreshable {
+                print("refresh")
+                await vm.getAll()
+            }
             .onChange(of: searchText, perform: { newValue in
                 vm.filter(with: searchText)
             })
             .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button {
-                        Task {
-                            await vm.getAll()
-                        }
-                    } label: {
-                        Text("Get All")
-                    }
-                }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
                         Task {
@@ -122,7 +114,9 @@ struct PokemonView: View {
                 }
             }
             .task {
-                await vm.getData()
+                if vm.results.isEmpty {
+                    await vm.getAll()
+                }
             }
         }
     }
