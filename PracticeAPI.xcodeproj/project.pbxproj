@@ -7,18 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D838734A29CD385A008EF5A7 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D838734929CD385A008EF5A7 /* Pokemon.swift */; };
+		D838734C29CD3894008EF5A7 /* PokemonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D838734B29CD3894008EF5A7 /* PokemonDetailView.swift */; };
 		D8FFF85429CBE60300F78E14 /* PracticeAPIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FFF85329CBE60300F78E14 /* PracticeAPIApp.swift */; };
 		D8FFF85629CBE60300F78E14 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FFF85529CBE60300F78E14 /* ContentView.swift */; };
 		D8FFF85829CBE60400F78E14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8FFF85729CBE60400F78E14 /* Assets.xcassets */; };
 		D8FFF85B29CBE60400F78E14 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8FFF85A29CBE60400F78E14 /* Preview Assets.xcassets */; };
+		D8FFF86229CBE61600F78E14 /* ApiVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FFF86129CBE61600F78E14 /* ApiVM.swift */; };
+		D8FFF86429CBE98600F78E14 /* ApiListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FFF86329CBE98600F78E14 /* ApiListView.swift */; };
+		D8FFF86629CBEB5C00F78E14 /* PokeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FFF86529CBEB5C00F78E14 /* PokeAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D838734929CD385A008EF5A7 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		D838734B29CD3894008EF5A7 /* PokemonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailView.swift; sourceTree = "<group>"; };
 		D8FFF85029CBE60300F78E14 /* PracticeAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PracticeAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8FFF85329CBE60300F78E14 /* PracticeAPIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeAPIApp.swift; sourceTree = "<group>"; };
 		D8FFF85529CBE60300F78E14 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D8FFF85729CBE60400F78E14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8FFF85A29CBE60400F78E14 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D8FFF86129CBE61600F78E14 /* ApiVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiVM.swift; sourceTree = "<group>"; };
+		D8FFF86329CBE98600F78E14 /* ApiListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiListView.swift; sourceTree = "<group>"; };
+		D8FFF86529CBEB5C00F78E14 /* PokeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +63,11 @@
 			children = (
 				D8FFF85329CBE60300F78E14 /* PracticeAPIApp.swift */,
 				D8FFF85529CBE60300F78E14 /* ContentView.swift */,
+				D8FFF86329CBE98600F78E14 /* ApiListView.swift */,
+				D8FFF86129CBE61600F78E14 /* ApiVM.swift */,
+				D8FFF86529CBEB5C00F78E14 /* PokeAPI.swift */,
+				D838734B29CD3894008EF5A7 /* PokemonDetailView.swift */,
+				D838734929CD385A008EF5A7 /* Pokemon.swift */,
 				D8FFF85729CBE60400F78E14 /* Assets.xcassets */,
 				D8FFF85929CBE60400F78E14 /* Preview Content */,
 			);
@@ -137,8 +152,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8FFF86629CBEB5C00F78E14 /* PokeAPI.swift in Sources */,
 				D8FFF85629CBE60300F78E14 /* ContentView.swift in Sources */,
+				D8FFF86429CBE98600F78E14 /* ApiListView.swift in Sources */,
 				D8FFF85429CBE60300F78E14 /* PracticeAPIApp.swift in Sources */,
+				D8FFF86229CBE61600F78E14 /* ApiVM.swift in Sources */,
+				D838734C29CD3894008EF5A7 /* PokemonDetailView.swift in Sources */,
+				D838734A29CD385A008EF5A7 /* Pokemon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

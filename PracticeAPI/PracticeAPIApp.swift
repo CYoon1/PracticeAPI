@@ -11,7 +11,7 @@ import SwiftUI
 struct PracticeAPIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            PokemonView()
         }
     }
 }
