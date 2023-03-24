@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct PokemonDetailView: View {
     var pokemon: Pokemon
     @StateObject var vm = PokemonDetailVM()
